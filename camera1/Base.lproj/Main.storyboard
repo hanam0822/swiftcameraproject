@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="camera1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camerapic" translatesAutoresizingMaskIntoConstraints="NO" id="cb3-Ph-znD" customClass="camerapic">
+                                <rect key="frame" x="87" y="367" width="240" height="152"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrD-Zp-4Gi">
+                                <rect key="frame" x="213" y="635" width="156" height="30"/>
+                                <state key="normal" title="tap to pick from library"/>
+                                <connections>
+                                    <action selector="libraryPic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0xI-aL-SWE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7Q-e5-nrF">
+                                <rect key="frame" x="31" y="635" width="110" height="30"/>
+                                <state key="normal" title="tap to take a pic"/>
+                                <connections>
+                                    <action selector="takeSelfieTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pTJ-sx-QFU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FrD-Zp-4Gi" firstAttribute="leading" secondItem="y7Q-e5-nrF" secondAttribute="trailing" constant="44" id="9Zr-0g-1yB"/>
+                            <constraint firstItem="FrD-Zp-4Gi" firstAttribute="leading" secondItem="y7Q-e5-nrF" secondAttribute="trailing" constant="72" id="DkI-93-NVt"/>
+                            <constraint firstItem="y7Q-e5-nrF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="FMz-Be-KHq"/>
+                            <constraint firstItem="cb3-Ph-znD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="FYM-rV-tWY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y7Q-e5-nrF" secondAttribute="bottom" constant="197" id="S3q-Zq-n1u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FrD-Zp-4Gi" secondAttribute="trailing" constant="45" id="Zi1-fw-k5A"/>
+                            <constraint firstItem="y7Q-e5-nrF" firstAttribute="top" secondItem="cb3-Ph-znD" secondAttribute="bottom" constant="116" id="aoa-fk-1wT"/>
+                            <constraint firstItem="FrD-Zp-4Gi" firstAttribute="top" secondItem="cb3-Ph-znD" secondAttribute="bottom" constant="116" id="beM-Cd-PHB"/>
+                            <constraint firstItem="cb3-Ph-znD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="323" id="cYJ-1G-D5L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cb3-Ph-znD" secondAttribute="trailing" constant="87" id="zgW-2K-AlP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageview" destination="cb3-Ph-znD" id="yyl-Km-oyH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camerapic" width="152" height="152"/>
+    </resources>
+</document>
